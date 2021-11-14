@@ -90,7 +90,7 @@ export class App extends Component {
         {status === Status.REJECTED && <div>{error.message}</div>}
         <ImageGallery items={images} />
         {status === Status.PENDING && (
-          <Loader type="ThreeDots" color="#00BFFF" height={80} width={80} />
+          <div className={Style.Loader}><Loader type="ThreeDots" color="#00BFFF" height={80} width={80} /></div>
         )}
         {status === Status.RESOLVED && isMoreAvailable && (
           <Button onClick={this.handleLoadMore}>Load more</Button>
